@@ -1,0 +1,33 @@
+title: di blog
+email: hihjlee0505@gmail.com
+description: >-
+  This is the blog of DI
+baseurl: ''
+url: 'https://localhost.com:4000'
+twitter_username: id_is_di
+github_username: idisdi
+
+languages: ['en', 'ko']
+default_lang: 'en'
+exclude_from_localization: ['javascript', 'images', 'css', 'public', 'sitemap']
+parallel_localization: false # 윈도우에서는 버그가 있어서 false로 해야 동작한다고 합니다.
+
+google_analytics: 'G-XXXXXXXXXX'
+
+# theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-polyglot
+  - jekyll-seo-tag
+
+sidebar:
+  hello:
+    en: hello
+    ko: 안녕하세요
+  home:
+    en: home
+    ko: 홈
+  title:
+    en: title
+    ko: 제목

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ site.title }}</title>
+  </head>
+  <body>
+    {% include header.html %}
+    <h1>{{ site.data.i18n.welcome }}</h1>
+    <article>{{ content }}</article>
+    {% include footer.html %}
+  </body>
+</html>

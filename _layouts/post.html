@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<h1 id="post-title">{{ page.lang_versions.en.title }}</h1>
+<p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
+
+<!-- Language Switcher -->
+<select id="lang-select">
+  <option value="en">English</option>
+  <option value="ko">한국어</option>
+</select>
+
+<!-- Post Content -->
+<div id="post-content">{{ page.lang_versions.en.content }}</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const langSelect = document.getElementById('lang-select');
+    const titleElement = document.getElementById('post-title');
+    const contentElement = document.getElementById('post-content');
+
+    // Language data from Jekyll front matter (converts it to JS object)
+    const langData = {
+      en: {
+        title: '{{ page.lang_versions.en.title }}',
+        content: `{{ page.lang_versions.en.content }}`,
+      },
+      ko: {
+        title: '{{ page.lang_versions.ko.title }}',
+        content: `{{ page.lang_versions.ko.content }}`,
+      },
+    };
+
+    // Change content when language is selected
+    langSelect.addEventListener('change', function () {
+      const selectedLang = langSelect.value;
+      titleElement.innerText = langData[selectedLang].title;
+      contentElement.innerHTML = langData[selectedLang].content;
+    });
+  });
+</script>
