@@ -1,6 +1,6 @@
 ---
 title: home
-permalink: /
+permalink: /en
 lang: en
 page_id: home_en
 layout: default
