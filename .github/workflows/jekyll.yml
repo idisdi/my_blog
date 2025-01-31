@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -22,8 +22,13 @@ jobs:
         run: |
           rm -rf _site  
           bundle exec jekyll clean
-          touch _site/.nojekyll
           bundle exec jekyll build
+
+      - name: Ensure _site directory exists
+        run: mkdir -p _site
+
+      - name: Create .nojekyll file
+        run: touch _site/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
