@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>di blog</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GZ8XD4B4Q1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-GZ8XD4B4Q1');
+    </script>
+  </head>
+  <body>
+    <nav>
+  <ul class="nav-lang">
+    
+    <li id="lang" class="lang-item">
+      <a
+        class="lang-link active"
+        href=" /blog/en "
+      >
+        en
+      </a>
+      <a href="#" class="track-click">여기 클릭 test</a>
+    </li>
+    
+    <li id="lang" class="lang-item">
+      <a
+        class="lang-link "
+        href=" /blog/ko/en "
+      >
+        ko
+      </a>
+      <a href="#" class="track-click">여기 클릭 test</a>
+    </li>
+    
+  </ul>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a.track-click').forEach((link) => {
+      link.addEventListener('click', function () {
+        gtag('event', 'click', {
+          event_category: 'engagement',
+          event_label: this.href,
+        });
+      });
+    });
+  });
+</script>
+
+    <h1></h1>
+    <article><p>english page eng eng</p>
+</article>
+    <footer>
+  <p>
+    &copy; 2025 di blog. All rights reserved.
+  </p>
+  <p>
+    <a href="/">Home</a> | <a href="/en/">English</a> |
+    <a href="/ko/">한국어</a>
+  </p>
+</footer>
+
+  </body>
+</html>

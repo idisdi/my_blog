@@ -1,0 +1,11 @@
+.lang-item {
+  float: right;
+}
+
+.lang-link {
+  text-align: center;
+}
+
+.lang-link.active {
+  font-weight: bold;
+}
