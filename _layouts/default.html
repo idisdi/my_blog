@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <title>{{ site.title }}</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GZ8XD4B4Q1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-GZ8XD4B4Q1');
+    </script>
   </head>
   <body>
     {% include header.html %}
     <h1>{{ site.data.i18n.welcome }}</h1>
     <article>{{ content }}</article>
-    {% include footer.html %}
+    {% include cookie-banner.html %} {% include footer.html %}
   </body>
 </html>

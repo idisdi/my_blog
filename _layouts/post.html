@@ -39,4 +39,17 @@ layout: default
       contentElement.innerHTML = langData[selectedLang].content;
     });
   });
+
+  // 스크롤 이벤트 추적
+  window.addEventListener('scroll', function () {
+    let scrollDepth = Math.round(
+      ((window.scrollY + window.innerHeight) / document.body.scrollHeight) * 100
+    );
+    if (scrollDepth > 50) {
+      gtag('event', 'scroll', {
+        event_category: 'engagement',
+        event_label: 'Scrolled 50% down',
+      });
+    }
+  });
 </script>

@@ -8,7 +8,22 @@
       >
         {{ lang }}
       </a>
+      <a href="https://example.com" class="track-click">여기 클릭</a>
     </li>
     {% endfor %}
   </ul>
 </nav>
+
+// 클릭 이벤트 추적 테스트
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a.track-click').forEach((link) => {
+      link.addEventListener('click', function () {
+        gtag('event', 'click', {
+          event_category: 'engagement',
+          event_label: this.href,
+        });
+      });
+    });
+  });
+</script>
