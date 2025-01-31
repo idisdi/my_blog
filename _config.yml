@@ -2,8 +2,8 @@ title: di blog
 email: hihjlee0505@gmail.com
 description: >-
   This is the blog of DI
-baseurl: ''
-url: 'https://localhost.com:4000'
+baseurl: '/blog'
+url: 'https://idisdi.github.io'
 twitter_username: id_is_di
 github_username: idisdi
 
