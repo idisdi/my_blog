@@ -12,6 +12,8 @@ default_lang: 'en'
 exclude_from_localization: ['javascript', 'images', 'css', 'public', 'sitemap']
 parallel_localization: false # 윈도우에서는 버그가 있어서 false로 해야 동작한다고 합니다.
 
+permalink: pretty
+
 # theme: minima
 
 plugins:
